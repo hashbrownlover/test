@@ -1,5 +1,7 @@
 import itertools
 
+print("hello")
+
 def hammingDistance(first, second):
     result = 0
     for i in range(len(first)):
