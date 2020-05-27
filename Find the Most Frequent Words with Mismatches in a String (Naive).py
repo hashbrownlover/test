@@ -1,6 +1,5 @@
 import itertools
 
-print("hello")
 
 def hammingDistance(first, second):
     result = 0
@@ -21,14 +20,6 @@ def allPossibleKmers(pattern, d):
 
 # naive implementation of generating all kmers
 def frequentWordsWithMismatches(text, k, d):
-    allKmers = allPossibleKmers(text, k)
-
-    for i in range(len(text) - k):
-        pattern = text[i:i+k]
-        for kmer in allKmers:
-            if (hammingDistance(pattern, kmer) <= d):
-                allKmers[kmer] += 1
-
     maxCount = max(allKmers.values())
 
     result = []
